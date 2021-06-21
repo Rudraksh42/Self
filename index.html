@@ -1,0 +1,78 @@
+<!-- this is the html for the login in page -->
+
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Tweek</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="main.js"></script>
+</head>
+
+<body >
+<center>
+    <div id="div1">
+    <h1 id="Heading">
+        Tweek
+    </h1>
+</div>
+<br>
+<br>
+<br>
+<div id="div2">
+    <img src="Tweek.png" class="logo">
+    <h3 style="font-family: 'Dancing Script'; font-size: 35px;" class="text-capitalize"><cite>Life is good when you capture and share the world's moment</cite></h3>
+    <h3 style="font-family: 'Dancing Script'; font-size: 30px;"><cite>Join Tweek today!</cite></h3>
+    <br>
+    <input type="text" placeholder="Username must be of 5 letters"  id="UsernameInput" class="form-control" >
+    
+    <br>
+    <button class="btn btn-info" id="LoginButton"type="submit" onclick="Login()">Login</button>
+    <br>
+    <br>
+<span style="display: inline-block;">
+    <span onclick="agree()" id="Checkbox" class="glyphicon glyphicon-unchecked"></span> 
+    
+    <h4 style="margin-left:20px; color: blue; text-decoration: underline;" data-toggle="modal" data-target="#myModal">I agree to all the terms and conditions of Tweek</h4> 
+    <h4 id="Error">    </h4>
+</span>
+</div>
+<br>
+<br>
+
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content--> 
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Terms and Conditions</h4>
+          </div>
+          <div class="modal-body">
+            <p id="terms">
+                <li>No Hacking</li>
+                <li>No sharing of passworsd</li>
+                <li>No cyberbullying anyone</li>
+                <li>No sending inapropreate messages to anyone</li>
+                <li>Have Fun</li>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+</body>

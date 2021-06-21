@@ -1,0 +1,76 @@
+<!-- This is the html for room screen -->  
+
+<!DOCTYPE html> 
+<html>
+<head> 
+	<title>Tweek Room</title>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="TweekRoom.js"></script>
+
+<body>
+    <div class="container"> 
+    <Button  style=" width:90px; margin-left: 1150px; margin-top: 10px;" onclick="Logout()" id="Logout button" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span>                           Logout</Button>
+    <br>   
+    <Button  style=" width:90px; margin-left: 1150px; margin-top: 10px;" id="Info button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-info-sign"></span>                                 Info</Button>
+    <center> 
+        <div id="div1">
+		<h1 id="Heading">	
+			Tweek	
+		</h1> 
+    </div>
+    <br>  
+    <br>
+    <br>
+    <h2 style="font-size: 40px; font-family: 'Caveat';" id="SGRRoomName">  </h2>
+		<div id="MSGoutput"> </div>
+    <br>
+<center>
+  <br>
+	<div style = "background-color:rgb(238, 190, 220); height: 180px; width: 810px; border-radius: 10px; box-shadow: 10px 10px 5px rgb(168, 167, 167);"> 
+    <br>    
+    <input style = "width: 600px; height: 40px; font-size: 30px; font-family: 'Caveat';" id="MSG" placeholder="Message" class="form-control" type="text">
+        <br>
+		<button style="font-size: 20px; border-radius: 10px; font-family: 'Caveat';" onclick="Send()" class="btn btn-info"><span class="glyphicon glyphicon-send"></span>                           Send</button>
+	</div>
+</center>
+</div>
+    
+    <div class="container">
+        <!-- Modal --> 
+        <div class="modal fade" id="myModal2" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Info</h4>
+              </div>
+              <div class="modal-body">
+                <p style="align-items: left;">
+                    This is Tweek this is a chatting app in which you can enter a Room Name, join the room and chatt.
+                    If you enter a room name for example Bff and your friend enter's the same name then you and your 
+                    friend both can see the messages and like the chatt too!   
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body> 

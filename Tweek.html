@@ -1,0 +1,96 @@
+<!-- this is the html for the 2nd screen (ie. enter room name screen)--> 
+<!DOCTYPE html>
+<html> 
+<head>
+	<title>Tweek By Rudraksh</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+ 
+</head> 
+<body> 
+<Button  style=" width:90px; margin-left: 1250px; margin-top: 10px;" onclick="Logout()" id="Logout button" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span>Logout</Button>
+<br>         
+<Button  style=" width:90px; margin-left: 1250px; margin-top: 10px;" id="Info button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-info-sign"></span>Info</Button>
+<br>
+<
+    <center>
+        <div id="div1">
+            <h1 id="Heading"> 
+                Tweek
+            </h1>
+        </div> 
+        <br>
+        <br>
+        <br>  
+        <br>
+        <h2 id="RoomUsername">  </h2>
+        <div style="background-color: rgb(238, 190, 220); border-radius: 10px; box-shadow: 10px 10px 5px rgb(168, 167, 167); height: 220px; width: 890px;">
+        <h2 style="font-family: 'Dancing Script'; font-size: 40px;">Add Room</h2>
+        <input class="form-control" style="width: 550px; height: 50px;  border-radius: 5px; border-width: 1px;  border-color: rgb(179, 219, 245); font-family: 'Dancing Script'; font-size: 20px;" id="RoomName Input" type="text" placeholder="Room Name">
+    <br>
+        <button style="width: 250px; height: 40px; border-width: 2px; border-style: groove; border-color: rgb(179, 219, 245); font-family: 'Dancing Script';
+        font-size: 20px;" onclick="AddRoom()" id="AddRoom Button" type="button" class="btn btn-info">Add Room</button>
+          
+    </div>
+    <br>
+    <br> 
+    <div style="background-color: rgb(238, 190, 220); border-radius: 10px; box-shadow: 10px 10px 5px rgb(168, 167, 167); width: 890px; height:auto;">
+        <h2 style="font-family: 'Dancing Script'; font-size: 55px;">#TrendingRooms</h2>
+        <br>
+        <div id="output">
+        </div>
+    </div>
+    <br>
+    <br>
+    </center>
+
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Info</h4>
+                
+              </div>
+              <div class="modal-body">
+                <p style="align-items: left;">
+                    This is Tweek this is a chatting app in which you can enter a Room Name, join the room and chatt.
+                    If you enter a room name for example Bff and your friend enter's the same name then you and your 
+                    friend both can see the messages and like the chatt too!   
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+       
+
+        
+</body>
+<script src="Tweek.js"></script>
+</html>
+
